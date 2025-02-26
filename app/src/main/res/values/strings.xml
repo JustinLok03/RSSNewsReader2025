@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">RSS News Reader</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="add_manage_feed">Add/Manage Feed</string>
+    <string name="add_feed">Add Feed</string>
+    <string name="news">News</string>
+    <string name="setting">Settings</string>
+
+    <!-- Preference -->
+    <string name="interface_header">Interface</string>
+    <string name="translation_header">Language</string>
+    <string name="language_identifier_header">Language Identifier</string>
+    <string name="text_to_speech_header">Text-to-Speech</string>
+    <string name="sync_header">Sync</string>
+
+    <string name="jobPeriodic_title">Update interval</string>
+    <string name="confidence_threshold_title">Confidence threshold (%)</string>
+
+    <string name="text_to_speech_settings">Text-to-Speech settings</string>
+    <string name="text_to_speech_settings_summary">Modify speech rate, pitch, and languages of text-to-speech</string>
+
+    <string name="background_music">Background music</string>
+    <string name="background_music_file">Upload background music</string>
+    <string name="background_music_summary_on">Play background music when text-to-speech is reading</string>
+    <string name="background_music_summary_off">Turn off background music when text-to-speech is reading</string>
+
+    <string name="background_music_volume">Background music volume</string>
+    <string name="background_music_volume_summary">Adjust the volume of background music</string>
+
+    <string name="theme_title">Dark theme</string>
+    <string name="theme_summary_on">Dark theme enabled</string>
+    <string name="theme_summary_off">Light theme enabled</string>
+
+    <string name="entries_limit_title">Article limit for each feed</string>
+    <string name="entries_limit_summary">Delete oldest unbookmarked articles after refresh (limit excludes bookmarked)</string>
+
+    <string name="display_summary_title">Display summary</string>
+    <string name="display_summary_on">Summary page of the article will be shown when an article is clicked</string>
+    <string name="display_summary_off">Summary page of the article will not be shown when an article is clicked</string>
+
+    <string name="highlight_text_title">Highlight text</string>
+    <string name="highlight_text_on">Search and highlight the paragraph where text-to-speech is speaking</string>
+    <string name="highlight_text_off">Does not highlight the text when text-to-speech is speaking</string>
+
+    <string name="translationLanguage_title">Desired language</string>
+    <string name="translationMethod_title">Translation method</string>
+    <string name="translationMethod_summary">Choose how the app translates text.\'Line by Line\' is slower but more accurate, while \'All at Once\' is faster but may be less accurate.</string>
+    <string name="confidence_threshold_summary">Higher % will result in better accuracy but will be less likely to change languages</string>
+    <string name="languageIdentifier">Use Language Identifier</string>
+    <string name="auto_translate_title">Auto-translate articles</string>
+    <string name="auto_translate_on">Automatically translate articles to the default language</string>
+    <string name="auto_translate_off">Do not automatically translate articles</string>
+
+    <string name="share">Share</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="mark_as_unread">Mark as unread</string>
+    <string name="move_entries_above_to_bin">Move entries above to bin</string>
+    <string name="move_entries_below_to_bin">Move entries below to bin</string>
+    <string name="delete">Delete</string>
+
+    <!-- Top App Bar WebView -->
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="exit_browser">Offline mode</string>
+    <string name="reload">Re-extract article</string>
+    <string name="reading_mode">Switch to reading mode</string>
+    <string name="playing_mode">Switch to playing mode</string>
+    <string name="highlight_text_turn_on">Turn on highlight text</string>
+    <string name="highlight_text_turn_off">Turn off highlight text</string>
+    <string name="background_music_turn_on">Turn on background music</string>
+    <string name="background_music_turn_off">Turn off background music</string>
+
+    <!-- Top App Bar WebView -->
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+
+    <!-- Navigation Drawer -->
+    <string name="feed">Feed</string>
+    <string name="help">Help</string>
+    <string name="add_more_feed">Add more feed</string>
+    <string name="save_app_state">Save app state</string>
+    <string name="load_app_state">Load app state</string>
+    <string name="all_feed">All feeds</string>
+
+    <!-- Reload Dialog -->
+    <string name="reload_message">Are you sure to re-extract the content of the article? (For more information, refer to help page)</string>
+    <string name="reload_all_message">Are you sure to re-extract all the articles\' content of this feed?</string>
+    <string name="reload_suggestion_message">No content was extracted from this article. Would you like to increase the extraction delay time? Some websites may require additional time for proper extraction.</string>
+    <string name="reload_confirmation">Re-extract article?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+
+    <!-- Login Dialog -->
+    <string name="login_message">An account is required to extract the full content of SOME websites. If you have an account to sign in into the website, please click "Yes" and you will be redirected to the website for signing in with your account. \n\n(Note: if you did not sign in and your new feed is extracted, you still can re-extract the feed at the add feed page after signing in)</string>
+    <string name="login_complete_message">If "Yes", your new feed will be added to the database. If "No", you will continue to stay in this page.</string>
+    <string name="login_request_confirmation">Does this news feed require a login account?</string>
+    <string name="login_complete_confirmation">Done signing in?</string>
+    <string name="no">No</string>
+
+    <!-- Bottom Filter Dialog -->
+    <string name="sort_by">Sort by</string>
+    <string name="sort_latest">Latest first</string>
+    <string name="sort_oldest">Oldest first</string>
+    <string name="filter_by">Filter by</string>
+    <string name="filter_all">All articles</string>
+    <string name="filter_bookmark">Bookmark only</string>
+    <string name="filter_read">Read only</string>
+    <string name="filter_unread">Unread only</string>
+
+    <!-- Bottom Filter Dialog -->
+    <string name="play">Play</string>
+    <string name="read">Read</string>
+
+    <string name="more">More</string>
+
+    <!-- Help Page -->
+    <string name="help_what_is_rss">What is RSS?</string>
+    <string name="help_what_is_rss_desc">RSS (Really Simple Syndication) is a technology that allows you to gather and receive updates from various news websites in a standardized format. By subscribing to RSS feeds, you can stay informed and effortlessly access the latest articles from your favorite sources.\n\nRSS eliminates the need to visit multiple websites individually to check for updates. Instead, the RSS news reader app collects and organizes the content from subscribed feeds into a single place. This way, you can conveniently browse and read news articles and other updates from various sources without the need to visit each website separately.\n\nWith the app\'s RSS functionality, you can easily discover new content, personalize your news feed by selecting specific sources, and stay up to date with the latest information across different categories. The app automatically fetches and presents the newest articles from your subscribed feeds, allowing you to efficiently consume news and stay informed with just a few taps.</string>
+    <string name="help_start">How to get started?</string>
+    <string name="help_start_desc">To subscribe to a news source, navigate to the feed page and paste the URL to the text box under the \'Add\' tab. Once the feed is successfully extracted, the articles will be displayed in the News page if the feed is not empty.\n\nTo obtain the URL, you can look for an RSS feed on your desired website and copy the link. Alternatively, you can check if your website has an RSS feed by using the link provided on the feed page under the \'Add\' tab.\n\nHowever, if the website does not support RSS, you can visit https://rss.app to generate your own feed.</string>
+    <string name="help_change_feed_language">How to change the language of a feed?</string>
+    <string name="help_change_feed_language_desc">To change the language of a feed, you can go to the \'Manage\' tab on the feed page and click on the edit button. Select the desired language for the feed.\n\nNote: If you choose a language other than \'Use Language Identifier\', text-to-speech will use that language regardless of other settings.</string>
+    <string name="help_wrong_language">Why is the text-to-speech speaking in the wrong language?</string>
+    <string name="help_wrong_language_desc">There are a few possibilities that could have led to this issue:\n\n1. The language of the feed is incorrect. You can change the language by accessing at the \'Manage\' tab on the feed page.\n\n2. If you are using the language identifier (you can check this on the \'Manage\' tab under the feed page), the identifier may not be able to accurately detect the language of the content based on the confidence threshold you have set in the Setting page. Setting a higher confidence threshold will make it less likely for the language to be changed. For example, if the confidence threshold is set to 80% and the identifier has only 50% certainty about the language, it will result in a failure and the language will be set to English</string>
+    <string name="help_offline_reading">Does the app support offline reading?</string>
+    <string name="help_offline_reading_desc">Yes, the app does support offline reading. However, the articles need to be extracted in advance. You can check if an article has been extracted by clicking on it and observing whether it is in browser mode or extracted mode. Usually, subsequent articles will be automatically extracted once an article is clicked, but this process might be halted by the device to save resources.</string>
+    <string name="help_reading_playing_mode">What are the \'Reading Mode\' and \'Playing Mode?\'</string>
+    <string name="help_reading_playing_mode_desc">In reading mode, only the article will be displayed without text-to-speech functionality.\n\nIn playing mode, text-to-speech will start to read aloud the content of the article once it is successfully extracted.\n\nPlease note that playing mode might take longer to load as it requires time to extract and generate the text-to-speech. On the other hand, loading is faster in reading mode as it does not wait for the complete extraction of the article.</string>
+    <string name="help_app_state">What are \'Save app state\' and \'Load app state\' in the navigation drawer?</string>
+    <string name="help_app_state_desc">The \'Save app state\' function will export an OPML (Outline Processor Markup Language) file to the storage. This file will contain the settings preferences, subscribed feeds, and articles, all of which will be written into the file.\n\nThe \'Load App State\' function allows the user to choose and import an OPML file. If the imported file contains settings preferences, feeds, and articles, the app will add them to the database.\n\nThese two functions are primarily used for transferring the settings and feeds from one phone to another.</string>
+    <string name="help_bluetooth_cut_off">Why does the text-to-speech get cut off at the starting point when using Bluetooth</string>
+    <string name="help_bluetooth_cut_off_desc">One of the reasons might be that some Bluetooth devices only keep the connection alive when audio is actively coming through, which is not the case with text-to-speech. As a result, the device tries to establish the connection at the starting point when text-to-speech starts speaking, causing the text-to-speech to cut off. To avoid this issue, you can try enabling background music in the Settings Page and see if it resolves the problem</string>
+    <string name="help_extraction_fail">Why does my extracted article not have any content?</string>
+    <string name="help_extraction_fail_desc">Some websites may require additional time for proper extraction. To allocate more time, you can visit the \'Manage\' tab on the feed page and click the reload button. Experiment with different delay times to determine the most suitable one.\n\nNote: Longer delay times will result in a longer extraction process. Please choose the shortest possible time, if applicable.</string>
+    <string name="help_import_music">How can I import an audio file for background music?</string>
+    <string name="help_import_music_desc">You can import an audio file on the Settings page under \'Upload background music\'. Please note that only audio files are supported, and video files are not supported. It is recommended to use the OGG format to avoid any distortion when looping.</string>
+    <string name="help_buttons">Icon button functionalities</string>
+    <string name="help_buttons_desc">To learn about the functionalities of the icon buttons, simply long-press the button to view the description.</string>
+
+    <!-- Feed -->
+    <string name="rss_search_link">Search RSS feeds by keywords using this link:\nhttps://rssfinder.app/</string>
+    <string name="empty_feed">No feed found</string>
+    <string name="delete_feed_message">Delete feed?</string>
+    <string name="delete_feed_confirmation">Are you sure to delete this feed? All the articles under this feed will be deleted too.</string>
+
+    <!-- Entry -->
+    <string name="empty_entry">No entry found</string>
+    <string name="go_to_add_feed">Go to Add Feed</string>
+
+    <!-- Reload Feed Dialog -->
+    <string name="add_delay">Add delay (sec)</string>
+    <string name="translate">Translate</string>
+
+</resources>
