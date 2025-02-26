@@ -25,6 +25,7 @@ public class Entry {
     private Date visitedDate;
     private int sentCountStopAt;
     private String bookmark;
+    @ColumnInfo(defaultValue = "0")
     private boolean isCached;
 
     public Entry(long feedId, String title, String link, String description, String imageUrl, String category, Date publishedDate) {

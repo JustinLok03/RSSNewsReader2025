@@ -1,5 +1,6 @@
 package my.mmu.rssnewsreader.data.feed;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
@@ -20,6 +21,7 @@ public class Feed {
     private String description;
     private String imageUrl;
     private String language;
+    @ColumnInfo(defaultValue = "0")
     private boolean isPreloaded;
 
     public Feed(String title, String link, String description, String imageUrl, String language) {

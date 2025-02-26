@@ -178,7 +178,7 @@ public class FeedRepository {
 
     public void markFeedAsPreloaded(long feedId) {
         Feed feed = feedDao.getFeedById(feedId);
-        if (feed != null) {
+        if (feed != null && !feed.isPreloaded()) {
             feed.setPreloaded(true);
             feedDao.update(feed)
                     .subscribeOn(Schedulers.io())
@@ -186,7 +186,7 @@ public class FeedRepository {
                     .subscribe(new CompletableObserver() {
                         @Override
                         public void onSubscribe(@NonNull Disposable d) {
-                            Log.d(TAG, "markFeedAsPreloaded: Feed marked as preloaded");
+                            Log.d(TAG, "markFeedAsPreloaded: Feed marked as preloaded" + feed.getTitle());
                         }
 
                         @Override
