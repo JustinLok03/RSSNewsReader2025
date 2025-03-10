@@ -15,6 +15,6 @@
     <item
         android:id="@+id/feedFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_plus"
+        android:icon="@drawable/ic_rss_feed"
         android:title="@string/add_manage_feed" />
 </menu>

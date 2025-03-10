@@ -52,7 +52,9 @@
             android:layout_gravity="bottom"
             app:menu="@menu/bottom_navigation_menu"
             app:labelVisibilityMode="unlabeled"
-            app:itemIconSize="24dp"/>
+            app:itemIconSize="24dp"
+            app:itemIconTint="@color/bottom_nav_item_color"
+            app:itemTextColor="@color/bottom_nav_item_color"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
