@@ -189,15 +189,23 @@ public class TtsPlayer extends PlayerAdapter implements TtsPlayerListener {
         }
         isPreparing = false;
 
-        if (language == null){
-            identifyLanguage(sentences.get(0), true);
-        } else {
-            try {
-                setLanguage(new Locale(language), true);
-            } catch (Exception e) {
-                Log.d(TAG, "Invalid locale " + e.getMessage());
-                identifyLanguage(sentences.get(0), true);
-            }
+        if (language == null || language.isEmpty()) {
+            Log.w(TAG, "Warning: Language is null or empty, defaulting to English.");
+            language = "en";
+        }
+
+        try {
+            Log.d(TAG, "Setting TTS language to: " + language);
+            setLanguage(new Locale(language), true);
+        } catch (Exception e) {
+            Log.d(TAG, "Invalid locale " + e.getMessage());
+            setLanguage(Locale.ENGLISH, true);
+        }
+
+        // ✅ Ensure TTS starts speaking after setup
+        if (!isPausedManually && sentences.size() > 0) {
+            Log.d(TAG, "Starting speech after setup.");
+            speak();
         }
     }
 

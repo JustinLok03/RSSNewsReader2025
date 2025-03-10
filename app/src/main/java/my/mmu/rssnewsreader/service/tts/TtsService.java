@@ -25,6 +25,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.functions.Action;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import my.mmu.rssnewsreader.data.sharedpreferences.SharedPreferencesRepository;
 
 @AndroidEntryPoint
 public class TtsService extends MediaBrowserServiceCompat {
@@ -35,6 +36,8 @@ public class TtsService extends MediaBrowserServiceCompat {
     TtsPlayer ttsPlayer;
     @Inject
     TtsPlaylist ttsPlaylist;
+    @Inject
+    SharedPreferencesRepository sharedPreferencesRepository;
     private TtsNotification ttsNotification;
     private static MediaSessionCompat mediaSession;
     private MediaMetadataCompat preparedData;
@@ -104,6 +107,32 @@ public class TtsService extends MediaBrowserServiceCompat {
                 mediaSession.setMetadata(preparedData);
                 ttsPlayer.setTtsSpeechRate(Float.parseFloat(preparedData.getString("ttsSpeechRate")));
                 String content = preparedData.getString("content");
+
+                String feedLanguage = preparedData.getString("language");
+                if (feedLanguage == null || feedLanguage.isEmpty()) {
+                    feedLanguage = "en"; // Default to English
+                }
+
+                // ✅ Get the user's selected translation language
+                String targetLanguage = sharedPreferencesRepository.getDefaultTranslationLanguage();
+                if (targetLanguage == null || targetLanguage.isEmpty()) {
+                    targetLanguage = "zh"; // Default to Chinese if undefined
+                }
+
+                // ✅ Detect if the article is translated
+                boolean isTranslated = preparedData.getString("html") != null && preparedData.getString("html").contains("translated-title");
+
+                // ✅ Choose the language based on whether it's translated or not
+                String languageToUse = isTranslated ? targetLanguage : feedLanguage;
+
+                // ✅ Pass the correct language to TTS
+                ttsPlayer.extract(
+                        Long.parseLong(preparedData.getString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID)),
+                        preparedData.getLong("feedId"),
+                        content,
+                        languageToUse // Use the correct language
+                );
+
                 ttsPlayer.extract(Long.parseLong(preparedData.getString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID)),
                         preparedData.getLong("feedId"), content, preparedData.getString("language"));
             }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe();
