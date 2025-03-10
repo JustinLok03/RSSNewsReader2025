@@ -261,6 +261,32 @@ public class WebViewActivity extends AppCompatActivity implements WebViewListene
         }
     }
 
+    @Override
+    public void showFakeLoading() {
+        new Thread(() -> {
+            try {
+                int progress = 0;
+                while (progress < 100) {
+                    Thread.sleep(500);
+                    progress += 10;
+                    int finalProgress = progress;
+                    runOnUiThread(() -> loading.setProgress(finalProgress));
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+
+    @Override
+    public void hideFakeLoading() {
+        runOnUiThread(() -> {
+            Log.d(TAG, "TTS is starting, hiding fake loading...");
+            loading.setVisibility(View.GONE);
+        });
+    }
+
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -465,8 +491,6 @@ public class WebViewActivity extends AppCompatActivity implements WebViewListene
                 if (newProgress < 100) {
                     loading.setVisibility(View.VISIBLE);
                     loading.setProgress(newProgress);
-                } else {
-                    loading.setVisibility(View.GONE);
                 }
             }
         });
@@ -736,7 +760,6 @@ public class WebViewActivity extends AppCompatActivity implements WebViewListene
                     ttsPlaylist.updatePlayingId(currentId);
                     mMediaBrowserHelper.getTransportControls().sendCustomAction("autoPlay", null);
                 }
-                loading.setVisibility(View.INVISIBLE);
                 functionButtons.setVisibility(View.VISIBLE);
                 functionButtons.setAlpha(1.0f);
                 reloadButton.setVisible(true);

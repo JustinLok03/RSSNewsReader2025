@@ -186,6 +186,7 @@ public class TtsPlayer extends PlayerAdapter implements TtsPlayerListener {
     private void setupTts() {
         if (webViewCallback != null) {
             webViewCallback.finishedSetup();
+            webViewCallback.showFakeLoading();
         }
         isPreparing = false;
 
@@ -202,10 +203,14 @@ public class TtsPlayer extends PlayerAdapter implements TtsPlayerListener {
             setLanguage(Locale.ENGLISH, true);
         }
 
-        // ✅ Ensure TTS starts speaking after setup
         if (!isPausedManually && sentences.size() > 0) {
             Log.d(TAG, "Starting speech after setup.");
-            speak();
+            new android.os.Handler().postDelayed(() -> {
+                if (webViewCallback != null) {
+                    webViewCallback.hideFakeLoading();
+                }
+                speak();
+            }, 3000);
         }
     }
 

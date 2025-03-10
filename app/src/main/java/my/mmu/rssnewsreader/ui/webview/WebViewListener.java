@@ -6,4 +6,6 @@ public interface WebViewListener {
     void makeSnackbar(String message);
     void reload();
     void askForReload(long feedId);
+    void showFakeLoading();
+    void hideFakeLoading();
 }
