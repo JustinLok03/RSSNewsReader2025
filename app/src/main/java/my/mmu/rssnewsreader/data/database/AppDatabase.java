@@ -36,22 +36,25 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             try {
+                //2023 to 2024 version
+                database.execSQL("ALTER TABLE entry_table ADD COLUMN priority INTEGER NOT NULL DEFAULT 0");
+                database.execSQL("ALTER TABLE entry_table ADD COLUMN sentCountStopAt INTEGER NOT NULL DEFAULT 0");
+                database.execSQL("ALTER TABLE entry_table ADD COLUMN bookmark TEXT DEFAULT ''");
+                database.execSQL("ALTER TABLE feed_table ADD COLUMN delayTime INTEGER NOT NULL DEFAULT 0");
+                database.execSQL("ALTER TABLE feed_table ADD COLUMN ttsSpeechRate REAL NOT NULL DEFAULT 1.0");
+                database.execSQL("ALTER TABLE history_table ADD COLUMN feedId INTEGER NOT NULL DEFAULT 0");
+                database.execSQL("ALTER TABLE playlist_table ADD COLUMN createdDate INTEGER DEFAULT NULL");
+
+                //2024 to 2025 version
                 database.execSQL("ALTER TABLE entry_table ADD COLUMN isCached INTEGER NOT NULL DEFAULT 0");
                 database.execSQL("ALTER TABLE feed_table ADD COLUMN isPreloaded INTEGER NOT NULL DEFAULT 0");
+
                 Log.d("DatabaseMigration", "Migration from v2 to v3 completed successfully.");
             } catch (Exception e) {
                 Log.e("DatabaseMigration", "Migration failed: " + e.getMessage());
             }
         }
     };
-
-    public static synchronized AppDatabase getInstance(Context context) {
-        return Room.databaseBuilder(context.getApplicationContext(),
-                        AppDatabase.class, "rss_database")
-                .addMigrations(MIGRATION_2_3)  // Ensure migration is applied
-                .fallbackToDestructiveMigration()
-                .build();
-    }
 
     public static class Callback extends RoomDatabase.Callback {
 
