@@ -1,0 +1,140 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/text_preference_category"
+        app:title="@string/sync_header">
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/jobPeriodic"
+            app:entryValues="@array/jobPeriodic_values"
+            app:icon="@drawable/ic_hourglass"
+            app:key="jobPeriodic"
+            app:title="@string/jobPeriodic_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:max="10000"
+            app:defaultValue="1000"
+            app:icon="@drawable/ic_articles"
+            app:key="entriesLimitPerFeed"
+            app:min="10"
+            app:seekBarIncrement="10"
+            app:showSeekBarValue="true"
+            app:summary="@string/entries_limit_summary"
+            app:title="@string/entries_limit_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/text_preference_category"
+        app:title="@string/interface_header">
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_night_mode"
+            app:key="night"
+            app:summaryOff="@string/theme_summary_off"
+            app:summaryOn="@string/theme_summary_on"
+            app:title="@string/theme_title" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:icon="@drawable/ic_summary"
+            app:key="displaySummary"
+            app:summaryOff="@string/display_summary_off"
+            app:summaryOn="@string/display_summary_on"
+            app:title="@string/display_summary_title" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:icon="@drawable/ic_marker"
+            app:key="highlightText"
+            app:summaryOff="@string/highlight_text_off"
+            app:summaryOn="@string/highlight_text_on"
+            app:title="@string/highlight_text_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/text_preference_category"
+        app:title="@string/translation_header">
+        
+        <ListPreference
+            app:entries="@array/defaultTranslationLanguage"
+            app:entryValues="@array/defaultTranslationLanguage_values"
+            app:icon="@drawable/ic_baseline_language_24"
+            app:key="defaultTranslationLanguage"
+            app:title="@string/translationLanguage_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="allAtOnce"
+            app:entries="@array/translationMethod"
+            app:entryValues="@array/translationMethod_values"
+            app:icon="@drawable/ic_auto_mode"
+            app:key="translationMethod"
+            app:summary="@string/translationMethod_summary"
+            app:title="@string/translationMethod_title" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:icon="@drawable/ic_auto_translate"
+            app:key="autoTranslate"
+            app:summaryOff="@string/auto_translate_off"
+            app:summaryOn="@string/auto_translate_on"
+            app:title="@string/auto_translate_title" />
+
+        <SeekBarPreference
+            android:max="100"
+            app:defaultValue="50"
+            app:icon="@drawable/ic_language"
+            app:key="confidenceThreshold"
+            app:min="10"
+            app:seekBarIncrement="10"
+            app:showSeekBarValue="true"
+            app:summary="@string/confidence_threshold_summary"
+            app:title="@string/confidence_threshold_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/text_preference_category"
+        app:title="@string/text_to_speech_header">
+
+        <Preference
+            android:key="key_text_to_speech_settings"
+            android:summary="@string/text_to_speech_settings_summary"
+            android:title="@string/text_to_speech_settings"
+            app:icon="@drawable/ic_speech" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:icon="@drawable/ic_music"
+            app:key="backgroundMusic"
+            app:summaryOff="@string/background_music_summary_off"
+            app:summaryOn="@string/background_music_summary_on"
+            app:title="@string/background_music" />
+
+        <ListPreference
+            app:defaultValue="default"
+            app:entries="@array/backgroundMusicFile"
+            app:entryValues="@array/backgroundMusicFile_values"
+            app:icon="@drawable/ic_music_file"
+            app:key="backgroundMusicFile"
+            app:title="@string/background_music_file"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:max="100"
+            app:defaultValue="50"
+            app:icon="@drawable/ic_volume"
+            app:key="backgroundMusicVolume"
+            app:min="10"
+            app:seekBarIncrement="10"
+            app:showSeekBarValue="true"
+            app:summary="@string/background_music_volume_summary"
+            app:title="@string/background_music_volume" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

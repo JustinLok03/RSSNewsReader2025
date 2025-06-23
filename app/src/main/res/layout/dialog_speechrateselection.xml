@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/speechRateRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Use system's settings"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0.25x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="0.5x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.0x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.25x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.5x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.75x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2x"/>
+
+            <RadioButton
+                android:id="@+id/speechRateRadioButton8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3x"/>
+
+        </RadioGroup>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

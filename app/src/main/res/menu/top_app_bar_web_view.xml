@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    9<item
+        android:id="@+id/translate"
+        android:icon="@drawable/ic_language"
+        android:title="Translate"
+        android:contentDescription="Translate"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/toggleTranslation"
+        android:icon="@drawable/ic_letter_switch"
+        android:title="Show Original"
+        android:contentDescription="Toggle Translation"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/zoomIn"
+        android:icon="@drawable/ic_zoom_in"
+        android:title="@string/zoom_in"
+        android:contentDescription="@string/zoom_in"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/zoomOut"
+        android:icon="@drawable/ic_zoom_out"
+        android:title="@string/zoom_out"
+        android:contentDescription="@string/zoom_out"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bookmark"
+        android:icon="@drawable/ic_bookmark_outline"
+        android:title="@string/bookmark"
+        android:contentDescription="@string/bookmark"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="@string/share"
+        android:contentDescription="@string/share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/openInBrowser"
+        android:icon="@drawable/ic_open_in_browser"
+        android:title="@string/open_in_browser"
+        android:contentDescription="@string/open_in_browser"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/exitBrowser"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/exit_browser"
+        android:contentDescription="@string/exit_browser"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/reload"
+        android:icon="@drawable/ic_reload"
+        android:title="@string/reload"
+        android:contentDescription="@string/reload"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/switchReadMode"
+        android:icon="@drawable/ic_book"
+        android:title="@string/reading_mode"
+        android:contentDescription="@string/reading_mode"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/switchPlayMode"
+        android:icon="@drawable/ic_play"
+        android:title="@string/playing_mode"
+        android:contentDescription="@string/playing_mode"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/highlightText"
+        android:icon="@drawable/ic_marker"
+        android:title="@string/highlight_text_turn_off"
+        android:contentDescription="@string/highlight_text_on"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/toggleBackgroundMusic"
+        android:icon="@drawable/ic_music"
+        android:title="@string/background_music_turn_on"
+        android:contentDescription="@string/background_music_summary_on"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/openTtsSetting"
+        android:icon="@drawable/ic_speech"
+        android:title="@string/text_to_speech_settings"
+        android:contentDescription="@string/text_to_speech_settings_summary"
+        app:showAsAction="ifRoom" />
+</menu>

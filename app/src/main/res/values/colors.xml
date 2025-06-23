@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F1584C</color>
+    <color name="primary_opacity16">#29F1584C</color>
+    <color name="primary_lighter">#F79D96</color>
+    <color name="text">#000000</color>
+    <color name="stroke">#DDDDDD</color>
+    <color name="background">#FAFAFA</color>
+    <color name="unread">#E1E1E1</color>
+    <color name="unreadText">#515151</color>
+</resources>
